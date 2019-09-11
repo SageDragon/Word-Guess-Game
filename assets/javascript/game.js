@@ -8,9 +8,19 @@ var wrongLetter = [];
 
 var wins = 0;
 var losses = 0;
-var guessesRemaining = 9;
+var guessesRemaining = 12;
 
-
+document.onkeypress = function(evt) {
+    evt = evt || window.event;
+    var charCode = evt.which || evt.keyCode;
+    var charStr = String.fromCharCode(charCode);
+    if (/[a-z]/i.test(charStr)) {
+    }
+    else {
+        alert("Please pick a charater A-Z");
+    }
+ }
+ 
 
 function Game() {
     randomWord = answers[Math.floor(Math.random() * answers.length)];
@@ -32,7 +42,7 @@ function Game() {
 }
 
 function reset() {
-    guessesRemaining = 9;
+    guessesRemaining = 12;
     wrongLetter = [];
     blanksAndCorrect = [];
     Game()
@@ -87,5 +97,13 @@ document.onkeyup = function (event) {
     document.getElementById("gameLetters").innerHTML = "  " + wrongLetter.join(" ");
 }
 
+function reload() {
+    location.reload(true)
+}
 
+function giveup() {
+    losses++;
+    reset()
+    document.getElementById("losstracker").innerHTML = " " + losses;
 
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>The Word Guess Game  </title>
+    <title>CFF Word Guess Game  </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -12,11 +12,11 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="text-center">
-                <strong>The Word Guess Game!</strong>
+                <strong>Cute Fluffy or Fantasy Word Guess Game!</strong>
             </h1>
             <hr>
             <h3 class="text-center">
-                <strong>Type a letter to get started.</strong>
+                <strong class="infoBoard">Type a letter to get started.</strong>
             </h3>
         </div>
         <br>
@@ -30,12 +30,12 @@
             </h5>
             <hr>
             <div class="text-center">
-                <span class="bold">Scoreboard: WINS:  <span id="winstracker"></span>  LOSSES:  <span id="losstracker"></span>  GUESSES LEFT:  <span id="guessesremaining"></span></span>
+                <strong>Scoreboard: WINS:  <span id="winstracker"></span>  LOSSES:  <span id="losstracker"></span>  GUESSES LEFT:  <span id="guessesremaining"></span></strong>
             </div>
             <hr>
             <div class="text-center">
-                <button class="m-2 btn btn-warning btn-lg giveUp">Give Up</button>
-                <button class="m-2 btn btn-danger btn-lg resetGame">Reset Game</button>
+                <button class="m-2 btn btn-warning btn-lg giveUp" onclick="giveup()">Give Up</button>
+                <button class="m-2 btn btn-danger btn-lg resetGame" onclick="reload()">Reset Game</button>
             </div>
         </div> 
     </div>
