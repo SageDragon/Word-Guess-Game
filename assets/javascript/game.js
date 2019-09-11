@@ -5,6 +5,7 @@ var theWordArray = []
 var blanks = 0;
 var blanksAndCorrect = [];
 var wrongLetter = [];
+var lastWord = "";
 
 var wins = 0;
 var losses = 0;
@@ -45,6 +46,7 @@ function reset() {
     guessesRemaining = 12;
     wrongLetter = [];
     blanksAndCorrect = [];
+    document.getElementById("infoBoard").innerText = "Congrads!!! your word was " + randomWord;
     Game()
 }
 
@@ -81,6 +83,7 @@ function complete() {
         losses++;
         reset()
         document.getElementById("losstracker").innerHTML = " " + losses;
+        document.getElementById("infoBoard").innerText = "Sorry You Lost!!";
     }
     document.getElementById("gameWord").innerHTML = "  " + blanksAndCorrect.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
@@ -105,5 +108,7 @@ function giveup() {
     losses++;
     reset()
     document.getElementById("losstracker").innerHTML = " " + losses;
+    document.getElementById("infoBoard").innerText = "Sorry You Lost!!";
+
 
 }
